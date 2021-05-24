@@ -9,6 +9,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     movielist: [],
+    userInfo: {},
   },
   getters: {
     getMovieList(state) {
@@ -18,7 +19,10 @@ export default new Vuex.Store({
   mutations: {
     FETCH_MOVIE_LIST(state, movielist){
       state.movielist = movielist
-    }
+    },
+    CREATE_USER(state, userInfo) {
+      state.userInfo = userInfo
+    },
   },
   actions: {
     async FETCH_MOVIE_LIST({ commit }) {
@@ -27,7 +31,16 @@ export default new Vuex.Store({
       const movielist = response.data
       // console.log(movielist)
       commit('FETCH_MOVIE_LIST', movielist)
-    }
+    },
+    async CREATE_USER({ commit }, userInfo) {
+      const USER_CREATE_URL = 'http://localhost:8000/api/v1/accounts/signup/'
+      const data = userInfo
+      const response = await axios.post(USER_CREATE_URL, data)
+
+      console.log(response)
+      
+      commit('CREATE_USER', response.data)
+    },
     
   },
   modules: {
