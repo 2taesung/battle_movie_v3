@@ -36,19 +36,19 @@ export default new Vuex.Store({
       // console.log(movielist)
       commit('FETCH_MOVIE_LIST', movielist)
     },
-    async CREATE_USER({ commit }, userInfo) {
-      const USER_CREATE_URL = 'http://localhost:8000/api/v1/accounts/signup/'
-      const data = userInfo
-      const response = await axios.post(USER_CREATE_URL, data)
+    // async CREATE_USER({ commit }, userInfo) {
+    //   const USER_CREATE_URL = 'http://localhost:8000/api/v1/accounts/signup/'
+    //   const data = userInfo
+    //   const response = await axios.post(USER_CREATE_URL, data)
 
-      console.log(response)
+    //   console.log(response)
       
-      commit('CREATE_USER', response.data)
-    },
+    //   commit('CREATE_USER', response.data)
+    // },
     AUTH_USER({ commit }, userInfo) {
       return new Promise((resolve) => {
         
-        const AUTH_USER_URL = 'http://localhost:8000/api/v1/token/'
+        const AUTH_USER_URL = 'http://localhost:8000/api/v1/api-token-auth/'
         const data = userInfo
         axios.post(AUTH_USER_URL, data)
         .then((response) => {

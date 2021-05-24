@@ -14,13 +14,13 @@
         <label for="password-confirmation" class="form-label">Password Confirmation</label>
         <input v-model="userInfo.password_confirmation" type="password" class="form-control" id="password-confirmation">
       </div>
-      <button @click.prevent="signup(userInfo)" type="submit" class="btn btn-primary">회원가입</button>
+      <button @click.prevent="signup" type="submit" class="btn btn-primary">회원가입</button>
     </form>
   </div>
 </template>
 
 <script>
-// import "https://cdn-css-file.css";
+import axios from 'axios'
 
 export default {
   name: 'SignupForm',
@@ -34,8 +34,22 @@ export default {
     }
   },
   methods: {
-      signup(){
-        this.$store.dispatch('CREATE_USER', this.userInfo)
+      // signup(){
+      //   this.$store.dispatch('CREATE_USER', this.userInfo)
+      // }
+      signup: function() {
+        axios({
+          method: 'POST',
+          url: 'http://localhost:8000/api/v1/accounts/signup/',
+          data: this.userInfo
+        })
+          .then(res => {
+            console.log(res)
+            this.$router.push({ name: 'Login' })
+          })
+          .catch(err => {
+            console.log(err)
+          })
       }
   }
 
