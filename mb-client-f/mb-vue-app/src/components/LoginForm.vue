@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'LoginForm',
   data() {
@@ -31,12 +32,26 @@ export default {
     }
   },
   methods: {
-    onClick() {
-      this.$store.dispatch('AUTH_USER', this.userInfo)
-      .then(() => {
-        this.$router.push('/home')
+    login: function() {
+      axios({
+        method: 'post',
+        url: 'http://localhost:8000/api/v1/accounts/api-token-auth/',
+        data: this.userInfo
       })
+        .then(res => {
+          console.log(res)
+          this.$router.push('/home')
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
+    // login() {
+    //   this.$store.dispatch('AUTH_USER', this.userInfo)
+    //   .then(() => {
+    //     this.$router.push('/home')
+    //   })
+    // }
   }
 }
 </script>
