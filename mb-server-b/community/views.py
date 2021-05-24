@@ -10,14 +10,30 @@ from rest_framework.response import Response
 
 #장고
 from django.shortcuts import get_object_or_404
+from django.contrib.auth import get_user_model
+
 
 #커스텀 파일 or 로컬 파일
 from .serializers import CommunitySerializer, MovieSerializer
 from . models import Community, Movie
 # from community import serializers
+User = get_user_model()
 
 
 # Create your views here.
+@api_view(['GET', 'POST'])
+def community_create(request):
+    if request.method == 'POST':
+        serializer = CommunitySerializer(data = request.data)
+        print(serializer)
+        if serializer.is_valid():
+            user_1 = User.objects.get(pk=request.data.get('username'))
+            community = serializer.save(user = user_1)
+            return Response(community.data)
+    return Response(status=400)
+
+
+
 @api_view(['GET', 'POST'])
 def community_list(request):
     if request.method == 'GET':
@@ -30,6 +46,8 @@ def community_list(request):
         if serializer.is_valid(raise_exception=True):
             serializer.save(author=request.user)
             return Response(data=serializer.data, status=status.HTTP_201_CREATED)
+
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def community_detail(request, community_id):
