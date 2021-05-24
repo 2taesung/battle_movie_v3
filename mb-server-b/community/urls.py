@@ -10,5 +10,6 @@ urlpatterns = [
     path('<int:community_id>/', views.community_detail),
     # test
     # path('json-1/', views.community_json_1),
+    path('community_create/', views.community_create),
 
 ]
