@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <div class="carousel-item active">
-      <img src="@/assets/logo.png/" class="d-block w-100" alt="...">
+    <div class="carousel-item active d-flex justify-content-center">
+      <img src="@/assets/logo.png/" class="d-block w-50" alt="...">
     </div>
     
 
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 
 export default {

@@ -10,6 +10,7 @@ export default new Vuex.Store({
   state: {
     movielist: [],
     userInfo: {},
+    token: localStorage.getItem('token'),
   },
   getters: {
     getMovieList(state) {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     CREATE_USER(state, userInfo) {
       state.userInfo = userInfo
+    },
+    AUTH_USER(state, token) {
+      state.token = token
     },
   },
   actions: {
@@ -41,6 +45,24 @@ export default new Vuex.Store({
       
       commit('CREATE_USER', response.data)
     },
+    AUTH_USER({ commit }, userInfo) {
+      return new Promise((resolve) => {
+        
+        const AUTH_USER_URL = 'http://localhost:8000/api/v1/token/'
+        const data = userInfo
+        axios.post(AUTH_USER_URL, data)
+        .then((response) => {
+
+          const token = response.data.access
+    
+          localStorage.setItem('token', token)
+          commit('AUTH_USER', token)
+          resolve()
+        })
+
+      })
+
+    }
     
   },
   modules: {
