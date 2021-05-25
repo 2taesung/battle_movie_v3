@@ -1,19 +1,22 @@
+# from django.db.models import fields
 from rest_framework import serializers
-from .models import Community, Movie
+from django.contrib.auth import get_user_model
+from .models import *
+
+
+User = get_user_model()
 
 class CommunitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Community
         fields = (
-            'title', 
-        # fields = (
-        #     'user', 'title', 
+            'user', 'title', 
             
             # 'created_at', 'updated_at',
         )
-        # read_only_fields = [
-        #     'user', 
-        # ]
+        read_only_fields = [
+            'user', 
+        ]
 
 
 class MovieSerializer(serializers.ModelSerializer):

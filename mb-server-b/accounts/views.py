@@ -5,7 +5,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .serializers import User, UserSerializer
+from .serializers import *
 
 @api_view(['POST'])
 def signup(request):
@@ -17,7 +17,7 @@ def signup(request):
     if password != password_confirmation:
         return Response(status=status.HTTP_400_BAD_REQUEST)
     # 2. (바인딩 후 ) 유효성 검사를 하고
-    serializer = UserSerializer(data=request.data)
+    serializer = UserCreationSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         # 3. 저장(== 회원가입)
         user = serializer.save()
