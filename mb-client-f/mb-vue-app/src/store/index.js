@@ -15,13 +15,13 @@ export default new Vuex.Store({
     token: localStorage.getItem('token'),
   },
   getters: {
-    getMovieList(state) {
-      return state.movielist
+    getBattleList(state) {
+      return state.battleList
     }
   },
   mutations: {
-    FETCH_MOVIE_LIST(state, movielist){
-      state.movielist = movielist
+    FETCH_BATTLE_LIST(state, battlelist){
+      state.battleList = battlelist
     },
     CREATE_USER(state, userInfo) {
       state.userInfo = userInfo
@@ -31,24 +31,14 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async FETCH_MOVIE_LIST({ commit }) {
-      const MOVIE_LIST_URL = 'http://localhost:8000/api/v1/community/'
-      const response = await axios.get(MOVIE_LIST_URL)
-      const movielist = response.data
+    async FETCH_BATTLE_LIST({ commit }) {
+      const BATTLE_LIST_URL = 'http://localhost:8000/api/v1/community/post_list/'
+      const response = await axios.get(BATTLE_LIST_URL)
+      const battlelist = response.data
       // console.log(movielist)
-      commit('FETCH_MOVIE_LIST', movielist)
+      commit('FETCH_BATTLE_LIST', battlelist)
     },
  
-    
-    // async CREATE_USER({ commit }, userInfo) {
-    //   const USER_CREATE_URL = 'http://localhost:8000/api/v1/accounts/signup/'
-    //   const data = userInfo
-    //   const response = await axios.post(USER_CREATE_URL, data)
-
-    //   console.log(response)
-      
-    //   commit('CREATE_USER', response.data)
-    // },
     AUTH_USER({ commit }, userInfo) {
       return new Promise((resolve) => {
         

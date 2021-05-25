@@ -2,10 +2,10 @@
   <div>
     <h1>배틀 목록페이지</h1>
     <BattleVote
-      v-for="(movie, index) in movieList"
-      :movie="movie"
+      v-for="(battle, index) in battleList"
+      :battle="battle"
       :index="index"
-      :key="movie.id"
+      :key="battle.id"
     />
 
   </div>
@@ -19,8 +19,8 @@ export default {
     BattleVote,
   },
   computed: {
-    movieList() {
-      return this.$store.getters.getMovieList
+    battleList() {
+      return this.$store.getters.getBattleList
     }
   },
 

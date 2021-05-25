@@ -31,7 +31,6 @@
 
 <script>
 import axios from 'axios'
-// import BattleCreateForm from '@/components/BattleCreateForm'
 
 export default {
   name: 'BattleForm',
@@ -50,12 +49,12 @@ export default {
       axios.defaults.headers.common['Authorization'] = `JWT ${token}`
       axios({
         method: 'POST',
-        url: 'http://localhost:8000/api/v1/community/community_create/',
+        url: 'http://localhost:8000/api/v1/community/post_create/',
         data: this.battle_info
       })
         .then(res => {
           console.log(res)
-          // this.$router.push({ name: 'Login' })
+          this.$router.push({ name: 'home' })
         })
         .catch(err => {
           console.log(err)
