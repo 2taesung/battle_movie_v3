@@ -1,5 +1,10 @@
+# from django.db.models import fields
 from rest_framework import serializers
-from .models import Community, Movie
+from django.contrib.auth import get_user_model
+from .models import *
+
+
+User = get_user_model()
 
 class CommunitySerializer(serializers.ModelSerializer):
     class Meta:

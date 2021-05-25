@@ -14,8 +14,10 @@ from django.contrib.auth import get_user_model
 
 
 #커스텀 파일 or 로컬 파일
-from .serializers import CommunitySerializer, MovieSerializer
-from . models import Community, Movie
+from .serializers import *
+from .models import *
+from accounts.serializers import *
+from accounts.models import *
 # from community import serializers
 User = get_user_model()
 
@@ -28,10 +30,10 @@ def community_create(request):
     movie1 = Movie.objects.get(title=movie1_title)
     movie2 = Movie.objects.get(title=movie2_title)
     if request.user.is_authenticated:
-        print()
+        # print()
         if request.method == 'POST':
             serializer = CommunitySerializer(data = request.data)
-            print(serializer)
+            # print(serializer)
             if serializer.is_valid(raise_exception=True):
                 serializer.save(user=request.user, movie_title_1=movie1, movie_title_2=movie2)
                 return Response(serializer.data)
@@ -52,6 +54,19 @@ def community_list(request):
             serializer.save(author=request.user)
             return Response(data=serializer.data, status=status.HTTP_201_CREATED)
 
+
+# @api_view(['GET', 'POST'])
+# def community_list(request):
+#     if request.method == 'GET':
+#         movies= Movie.objects.all()
+#         serializer = MovieSerializer(movies, many=True)
+#         return Response(serializer.data)
+
+#     elif request.method == 'POST':
+#         serializer = CommunitySerializer(data=request.data) # 바인딩
+#         if serializer.is_valid(raise_exception=True):
+#             serializer.save(author=request.user)
+#             return Response(data=serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
@@ -80,3 +95,11 @@ def community_detail(request, community_id):
 #     movies = Movie.objects.all()
 #     serializer = MovieSerializer(movies, many=True)
 #     return Response(serializer.data)
+
+
+#내가 적은 or 투표한 글(?)
+@api_view(['GET'])
+def my_post(request):
+    user = request.user
+    user_serializer = UserSerializer(user)
+    return Response(user_serializer.data)

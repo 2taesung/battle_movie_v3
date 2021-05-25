@@ -11,5 +11,6 @@ urlpatterns = [
     # test
     # path('json-1/', views.community_json_1),
     path('community_create/', views.community_create),
+    path('my_post/', views.my_post, name='my_post'),
 
 ]
