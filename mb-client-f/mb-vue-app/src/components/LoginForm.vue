@@ -47,16 +47,10 @@ export default {
           console.log(err)
         })
     }
-    // login() {
-    //   this.$store.dispatch('AUTH_USER', this.userInfo)
-    //   .then(() => {
-    //     this.$router.push('/home')
-    //   })
-    // }
+
   }
 }
 </script>
 
 <style>
-
 </style>

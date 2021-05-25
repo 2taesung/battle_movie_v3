@@ -21,7 +21,6 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   name: 'SignupForm',
   data() {
@@ -52,12 +51,10 @@ export default {
           })
       }
   }
-
 }
 </script>
 
 <style>
-
   .signup-form {
   display: inline-block;
   margin-right: 10px;

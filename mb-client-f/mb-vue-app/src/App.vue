@@ -9,7 +9,7 @@
 
         </div>
         <div v-else>
-          <router-link :to="{ name:'Home' }">Home</router-link>| 
+          <router-link :to="{ name:'home' }">home</router-link>| 
           <router-link :to="{ name: 'battleform' }">배틀생성</router-link>|
           <router-link :to="{ name: 'battlelist' }">배틀목록</router-link>
         </div>

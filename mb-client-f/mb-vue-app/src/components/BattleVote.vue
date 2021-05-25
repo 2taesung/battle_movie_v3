@@ -1,26 +1,23 @@
 <template>
-  <div>
-    <h2>목록을 누르면</h2>
+  <div class="d-flex justify-content-center">
+    
     <ul>
-      <li>
-      {{ movie.title }}
-      </li>
+    {{ battle.title }}
     </ul>
-
-    <!-- <span>{{ movie.title }}</span> -->
+    
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'BattleVote',
   props: {
-    movie: {
+    battle: {
       type: Object,
       required: true,
     }
   }
+
 }
 </script>
 
