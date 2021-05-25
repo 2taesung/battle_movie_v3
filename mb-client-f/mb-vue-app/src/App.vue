@@ -2,23 +2,42 @@
   <div id="app">
     <div id="nav">
       <ul>
-        <router-link :to="{ name:'Home' }">Home</router-link>| 
-        <router-link :to="{ name:'login' }">로그인</router-link>|
-        <router-link :to="{ name:'signup' }">회원가입</router-link>|
-        <router-link :to="{ name: 'battleform' }">배틀 생성하기</router-link>|
-        <router-link :to="{ name: 'battlelist' }">목록보기</router-link>
+        <div v-if="!isLogin">
+
+          <router-link :to="{ name:'login' }">로그인</router-link>|
+          <router-link :to="{ name:'signup' }">회원가입</router-link>|
+
+        </div>
+        <div v-else>
+          <router-link :to="{ name:'Home' }">Home</router-link>| 
+          <router-link :to="{ name: 'battleform' }">배틀생성</router-link>|
+          <router-link :to="{ name: 'battlelist' }">배틀목록</router-link>
+        </div>
       </ul>
     </div>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-
-
-      </div>
-    </div>
+    
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  data: function () {
+    return {
+      isLogin: false,
+    }
+  },
+  created: function () {
+    const token = localStorage.getItem('jwt')
+    if (token) {
+      this.isLogin = true
+    }
+  }
+
+}
+</script>
 
 <style>
   @import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css";

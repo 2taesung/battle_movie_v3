@@ -1,12 +1,6 @@
 <template>
   <div>
     <h1>배틀 목록페이지</h1>
-    <!-- <span>{{ movieList }}</span> -->
-    <!-- <span>
-      {{ movieList.movie }}
-    </span> -->
-    <!-- <li v-for="movie in movieList" :key="movie.id">{{ movie.title }}</li> -->
-    <!-- <BattleVote/> -->
     <BattleVote
       v-for="(movie, index) in movieList"
       :movie="movie"
@@ -31,7 +25,7 @@ export default {
   },
 
   async created() {
-    this.$store.dispatch('FETCH_MOVIE_LIST')
+    this.$store.dispatch('FETCH_BATTLE_LIST')
   }
 
 }

@@ -5,13 +5,15 @@ class CommunitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Community
         fields = (
-            'user', 'title', 
+            'title', 
+        # fields = (
+        #     'user', 'title', 
             
             # 'created_at', 'updated_at',
         )
-        read_only_fields = [
-            'user', 
-        ]
+        # read_only_fields = [
+        #     'user', 
+        # ]
 
 
 class MovieSerializer(serializers.ModelSerializer):

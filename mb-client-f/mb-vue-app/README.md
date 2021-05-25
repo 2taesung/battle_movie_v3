@@ -49,3 +49,17 @@ https://kr.vuejs.org/v2/guide/list.html
 ```
 
 내가 마스터로 작업을 했기 때문 나 역시 로컬에서 브랜치를 생성해 작업하면 된다.
+
+
+
+## 0524
+
+### git pull 했을때 vue가 안열리는 현상
+
+![스크린샷 2021-05-25 12.29.34](/Users/leetaesung/Desktop/git/battle_movie_v3/mb-client-f/mb-vue-app/스크린샷 2021-05-25 12.29.34.png)
+
+### 해결
+
+https://stackoverflow.com/questions/51172064/command-not-found-with-vue-cli
+
+npm을 지우고 다시 설치

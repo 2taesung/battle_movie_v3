@@ -10,6 +10,8 @@ export default new Vuex.Store({
   state: {
     movielist: [],
     userInfo: {},
+    battleList: [],
+    
     token: localStorage.getItem('token'),
   },
   getters: {
@@ -36,6 +38,8 @@ export default new Vuex.Store({
       // console.log(movielist)
       commit('FETCH_MOVIE_LIST', movielist)
     },
+ 
+    
     // async CREATE_USER({ commit }, userInfo) {
     //   const USER_CREATE_URL = 'http://localhost:8000/api/v1/accounts/signup/'
     //   const data = userInfo

@@ -45,7 +45,7 @@ export default {
         })
           .then(res => {
             console.log(res)
-            this.$router.push({ name: 'Login' })
+            this.$router.push({ name: 'login' })
           })
           .catch(err => {
             console.log(err)
@@ -62,5 +62,4 @@ export default {
   display: inline-block;
   margin-right: 10px;
   }
-/* @import "https://cdn-css-file.css"; */
 </style>

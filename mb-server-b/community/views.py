@@ -27,16 +27,16 @@ def community_create(request):
     movie2_title = request.data.get('movie_title_2')
     movie1 = Movie.objects.get(title=movie1_title)
     movie2 = Movie.objects.get(title=movie2_title)
-    if request.user.is_authenticated:
-        print()
-        if request.method == 'POST':
-            serializer = CommunitySerializer(data = request.data)
-            print(serializer)
-            if serializer.is_valid(raise_exception=True):
-                serializer.save(user=request.user, movie_title_1=movie1, movie_title_2=movie2)
-                return Response(serializer.data)
-        return Response(status=400)
+    # if request.user.is_authenticated:
+    print(request.user)
+    if request.method == 'POST':
+        serializer = CommunitySerializer(data = request.data)
+        print(serializer)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user, movie_title_1=movie1, movie_title_2=movie2)
+            return Response(serializer.data)
     return Response(status=400)
+    # return Response(status=400)
 
 
 @api_view(['GET', 'POST'])
