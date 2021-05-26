@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" modified="2021-05-22T07:14:05.607Z" agent="5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="k366ITlxN_6rkIIIQZiW" version="14.6.13" type="github">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="872" dy="487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-1" value="App.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-2" value="SignupPage.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-3" value="SignupForm.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-4" value="LoginPage.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-5" value="LogoutForm.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-1" target="g_aeNdJ28LFW3Nr3O-Ai-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="sourcePoint" />
+            <mxPoint x="330" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-8" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-4" target="g_aeNdJ28LFW3Nr3O-Ai-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="sourcePoint" />
+            <mxPoint x="330" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-9" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-2" target="g_aeNdJ28LFW3Nr3O-Ai-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="sourcePoint" />
+            <mxPoint x="170" y="310" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-10" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="243" y="140" as="sourcePoint" />
+            <mxPoint x="160" y="206" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-11" value="HotBattle.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-12" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="g_aeNdJ28LFW3Nr3O-Ai-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="365" y="140" as="sourcePoint" />
+            <mxPoint x="330" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-13" value="HotBattleComment.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="320" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="460" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-15" value="BattleForm.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-16" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1.017;exitY=0.425;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-1" target="g_aeNdJ28LFW3Nr3O-Ai-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="365" y="120" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="620" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-17" value="BattleList.vue" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g_aeNdJ28LFW3Nr3O-Ai-18" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.125;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="g_aeNdJ28LFW3Nr3O-Ai-1" target="g_aeNdJ28LFW3Nr3O-Ai-17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KFXaSv4DiwfgcblU037Y-1" value="BattleVote.vue" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KFXaSv4DiwfgcblU037Y-2" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="KFXaSv4DiwfgcblU037Y-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="270" as="sourcePoint" />
+            <mxPoint x="810" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
