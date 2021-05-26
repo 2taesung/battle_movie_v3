@@ -1,7 +1,8 @@
 <template>
   <div class="d-flex justify-content-center">
-    <ul @click="onClick(battle)">
-      {{ battle.title }}
+    
+    <ul>
+    {{ battle.title }}
     </ul>
     
   </div>
@@ -15,14 +16,7 @@ export default {
       type: Object,
       required: true,
     }
-  },
-  methods: {
-    onClick(battle) {
-      this.$store.commit('DETAIL_POST', battle)
-      this.$router.push('/detail')
-    }
   }
-
 
 }
 </script>
