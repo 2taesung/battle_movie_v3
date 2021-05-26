@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>상세페이지</h1>
-    <h2>{{ postbattle }}</h2>
+    <h2>주제 : {{ postbattle.title }}</h2>
+    <h3>{{ postbattle.movie_title_1 }}</h3>
     
     
   </div>

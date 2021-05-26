@@ -18,6 +18,9 @@ export default new Vuex.Store({
   getters: {
     getBattleList(state) {
       return state.battleList
+    },
+    getPostBattle_Movie(state) {
+      return state.postbattle
     }
   },
   mutations: {
