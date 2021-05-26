@@ -1,13 +1,24 @@
 <template>
   <div>
-    <h1>배틀 목록페이지</h1>
+    <hr style="height: 8px;">
+    <div>
+    <h1>
+    배틀 목록페이지
+    </h1>
+    <button style="float:right; width:150px;">배틀생성</button>
+    <br>
+    </div>
+    <hr style="height: 5px;">
+    <br>
+    <br>
+    <br>
     <BattleVote
       v-for="(battle, index) in battleList"
       :battle="battle"
       :index="index"
       :key="battle.id"
     />
-
+    
   </div>
 </template>
 
@@ -31,6 +42,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+hr {
+  background-color: red ;
+}
 </style>

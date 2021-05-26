@@ -1,9 +1,15 @@
 <template>
   <div class="home">
-    <img src="@/assets/img.jpeg" alt="">
-    <div class="carousel-item active d-flex justify-content-center">
-      <img src="@/assets/logo.png/" class="d-block w-50" alt="...">
+    <h1> HOT BATTLE </h1>
+    <div class="center d-flex justify-content-center">
+        <div style="position:relative; top:80px; left:100px;"></div>
+        <img style="top:350px; width: 70%; position: absolute; " src="@/assets/logo.png/" class="" alt="...">
+        <img style="width: 50%;" src="@/assets/img.jpeg" alt="" >
+        
+        <!-- <div style="position: relative; top: 266px; left: 120px;"></div> -->
+
     </div>
+
     
 
   </div>
@@ -19,3 +25,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+img {
+  display:flex;
+  margin:auto;
+}
+</style>

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # Third-party packages
     'corsheaders',
     'rest_framework',
+    'social_django',
 
     # Django core packages
     'django.contrib.admin',
@@ -154,3 +155,14 @@ AUTH_USER_MODEL = 'accounts.User'
 JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
+
+
+# 구글 로그인 API
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL = '/auth/login/google-oauth2/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

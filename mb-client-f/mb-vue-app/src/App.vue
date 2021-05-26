@@ -1,24 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <ul>
-        <div v-if="!isLogin">
+    <div id="app">
+      <div id="nav">
+        <ul>
+          <div v-if="!isLogin">
+            <router-link :to="{ name:'login' }">로그인</router-link>|
+            <router-link :to="{ name:'signup' }">회원가입</router-link>|
 
-          <router-link :to="{ name:'login' }">로그인</router-link>|
-          <router-link :to="{ name:'signup' }">회원가입</router-link>|
+          </div>
+          <div v-else class="row" style="width:100%;" >
+            <router-link :to="{ name:'home' }" class="col p-0">home</router-link>| 
+            <router-link :to="{ name: 'battleform' }" class="col p-0">배틀생성</router-link>|
+            <router-link :to="{ name: 'battlelist' }" class="col p-0">배틀목록</router-link>
+          </div>
+        </ul>
+      </div>
 
-        </div>
-        <div v-else>
-          <router-link :to="{ name:'home' }">home</router-link>| 
-          <router-link :to="{ name: 'battleform' }">배틀생성</router-link>|
-          <router-link :to="{ name: 'battlelist' }">배틀목록</router-link>
-        </div>
-      </ul>
+      
+      <router-view/>
     </div>
 
-    
-    <router-view/>
-  </div>
 </template>
 
 <script>
@@ -63,11 +63,11 @@ ul {
   align-content: center;
   border: 5px solid red;
   border-radius: 100px;
-  width: 40%;
+  width: 100%;
   height: 50px;
   margin: 10px;
   border-radius: 0%;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #nav a {
