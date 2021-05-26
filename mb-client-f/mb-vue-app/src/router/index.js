@@ -5,11 +5,17 @@ import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
 import BattleForm from '../views/BattleForm.vue'
 import BattleList from '../views/BattleList.vue'
+import BattleDetail from '@/components/BattleDetail.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/detail',
+    name: 'detail',
+    component: BattleDetail   
+  },
   {
     path: '/',
     name: 'home',
